@@ -21,10 +21,10 @@ class _NavBarState extends State<NavBar> {
   @override
   void initState() {
     _screens = [
-      DrawerMenuScreen(),
-      HomeScreen(),
-      CalendarScreen(),
-      ProfileScreen(),
+      const DrawerMenuScreen(),
+      const HomeScreen(),
+      const CalendarScreen(),
+      const ProfileScreen(),
     ];
 
     super.initState();
@@ -37,7 +37,7 @@ class _NavBarState extends State<NavBar> {
       bottomNavigationBar: SizedBox(
         height: 70,
         child: ClipRRect(
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(
               20,
             ),
@@ -101,7 +101,7 @@ _getBottomNavBarItem({
   return BottomNavigationBarItem(
     icon: SvgPicture.asset(icon,
         colorFilter: index == 1
-            ? ColorFilter.mode(ColorsApp.mainIconColor, BlendMode.srcIn)
+            ? const ColorFilter.mode(ColorsApp.mainIconColor, BlendMode.srcIn)
             : null),
     activeIcon: SvgPicture.asset(activeIcon,
         colorFilter: index == 1
