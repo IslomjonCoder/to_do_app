@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:to_do_app/ui/route/app_routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,8 +10,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
+      initialRoute: RouteNames.initial,
+      onGenerateRoute: AppRoutes.generateRoute,
     );
   }
 }
