@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 class ColorsApp {
-  static const Color c_FFFFFF = Color(0xFFFFFFFF);
-  static const Color c_090A0A = Color(0xFF090A0A);
-  static const Color c_4683F9 = Color(0xFF4683F9);
-  static const Color c_B53CC9 = Color(0xFFB53CC9);
-  static const Color c_FED608 = Color(0xFFFED608);
-  static const Color c_0FD25D = Color(0xFF0FD25D);
+  static const Color mainBackground = Color(0xFF1a1a2f);
+  static const Color secondaryBG = Color(0xFF242443);
+  static const Color mainButtoncolor = Color(0xFF7A12FF);
+  static const Color borderColor = Color(0xFF7A12FF);
+  static const Color mainIconColor= Color(0xFF777E99);
+  static const Color secondaryForTextAndIcon = Color(0xFFA1A1C1);
+  static const Color faqColorandSomeTexts = Color(0xFF8489A0);
 }

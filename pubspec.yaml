@@ -20,6 +20,7 @@ dependencies:
   device_preview: ^1.1.0
   flutter_screenutil: ^5.8.4
   zoom_tap_animation: ^1.1.0
+  sqflite: ^2.2.8+4
 
 dev_dependencies:
   flutter_test:
@@ -37,30 +38,32 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/
+    # - assets/images/
     - assets/svg/
+    - assets/svg/add-task-icons
+    - assets/svg/arrow-icons-all
+    - assets/svg/bottom-nav-bar-icons
+    - assets/svg/calendar-s-icons
+    - assets/svg/category-icons
+    - assets/svg/menu-icons
+    - assets/svg/setting-page-icons
+    - assets/svg/task-page-icons
+    - assets/svg/urgent_colorful_icons
 
 
   fonts:
-   - family: Schyler
+   - family: Roboto
      fonts:
-       - asset: assets/fonts/Muller/MullerBlack.ttf
-       - asset: assets/fonts/Muller/MullerBlackItalic.ttf
-       - asset: assets/fonts/Muller/MullerBold.ttf
-       - asset: assets/fonts/Muller/MullerBoldItalic.ttf
-       - asset: assets/fonts/Muller/MullerExtraBold.ttf
-       - asset: assets/fonts/Muller/MullerExtraBoldItalic.ttf
-       - asset: assets/fonts/Muller/MullerHairline.ttf
-       - asset: assets/fonts/Muller/MullerHairlineItalic.ttf
-       - asset: assets/fonts/Muller/MullerHeavy.ttf
-       - asset: assets/fonts/Muller/MullerHeavyItalic.ttf
-       - asset: assets/fonts/Muller/MullerLight.ttf
-       - asset: assets/fonts/Muller/MullerLightItalic.ttf
-       - asset: assets/fonts/Muller/MullerMedium.ttf
-       - asset: assets/fonts/Muller/MullerMediumItalic.ttf
-       - asset: assets/fonts/Muller/MullerRegular.ttf
-       - asset: assets/fonts/Muller/MullerRegularItalic.ttf
-       - asset: assets/fonts/Muller/MullerThin.ttf
-       - asset: assets/fonts/Muller/MullerThinItalic.ttf
-       - asset: assets/fonts/Muller/MullerUltraLight.ttf
-       - asset: assets/fonts/Muller/MullerUltraLightItalic.ttf
+       - asset: assets/fonts/Roboto-Black.ttf
+       - asset: assets/fonts/Roboto-BlackItalic.ttf
+       - asset: assets/fonts/Roboto-Bold.ttf
+       - asset: assets/fonts/Roboto-BoldItalic.ttf
+       - asset: assets/fonts/Roboto-Italic.ttf
+       - asset: assets/fonts/Roboto-Light.ttf
+       - asset: assets/fonts/Roboto-LightItalic.ttf
+       - asset: assets/fonts/Roboto-Medium.ttf
+       - asset: assets/fonts/Roboto-MediumItalic.ttf
+       - asset: assets/fonts/Roboto-Regular.ttf
+       - asset: assets/fonts/Roboto-Thin.ttf
+       - asset: assets/fonts/Roboto-ThinItalic.ttf
+       
