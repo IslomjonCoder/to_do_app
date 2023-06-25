@@ -44,15 +44,15 @@ flutter:
   assets:
     # - assets/images/
     - assets/svg/
-    - assets/svg/add-task-icons
-    - assets/svg/arrow-icons-all
-    - assets/svg/bottom-nav-bar-icons
-    - assets/svg/calendar-s-icons
-    - assets/svg/category-icons
-    - assets/svg/menu-icons
-    - assets/svg/setting-page-icons
-    - assets/svg/task-page-icons
-    - assets/svg/urgent_colorful_icons
+    - assets/svg/add-task-icons/
+    - assets/svg/arrow-icons-all/
+    - assets/svg/bottom-nav-bar-icons/
+    - assets/svg/calendar-s-icons/
+    - assets/svg/category-icons/
+    - assets/svg/menu-icons/
+    - assets/svg/setting-page-icons/
+    - assets/svg/task-page-icons/
+    - assets/svg/urgent_colorful_icons/
 
 
   fonts:

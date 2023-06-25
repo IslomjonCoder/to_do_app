@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../bottom_nav_bar/navigationBar_Screen.dart';
 import '../home/home.dart';
 
 class RouteNames {
@@ -10,7 +11,7 @@ class AppRoutes {
   static Route generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case RouteNames.initial:
-        return MaterialPageRoute(builder: (context) => const HomeScreen());
+        return MaterialPageRoute(builder: (context) =>  NavBar());
       default:
         return MaterialPageRoute(
             builder: (context) => const Scaffold(
