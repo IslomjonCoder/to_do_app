@@ -10,6 +10,15 @@ class CalendarScreen extends StatefulWidget {
 class _CalendarScreenState extends State<CalendarScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return const Scaffold(
+      body: Center(
+        child: Text(
+          "Calendar Screen",
+          style: TextStyle(
+            fontSize: 30,
+          ),
+        ),
+      ),
+    );
   }
 }

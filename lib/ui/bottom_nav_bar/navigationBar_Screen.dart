@@ -33,6 +33,36 @@ class _NavBarState extends State<NavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: Container(
+        // decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
+        width: 380,
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(10),
+          child: FloatingActionButton(
+            backgroundColor: ColorsApp.mainButtoncolor,
+            shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(0)),
+            ),
+            onPressed: () {},
+            child: Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SvgPicture.asset(
+                    IconsApp.addBig,
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  const Text(
+                    "Create New Task",
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
       body: _screens[pageIndex],
       bottomNavigationBar: SizedBox(
         height: 70,

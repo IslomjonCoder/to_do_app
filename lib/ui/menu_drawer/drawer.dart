@@ -10,6 +10,15 @@ class DrawerMenuScreen extends StatefulWidget {
 class _DrawerMenuScreenState extends State<DrawerMenuScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return const Scaffold(
+      body: Center(
+        child: Text(
+          "Drawer Screen",
+          style: TextStyle(
+            fontSize: 30,
+          ),
+        ),
+      ),
+    );
   }
 }
