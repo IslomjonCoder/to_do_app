@@ -123,4 +123,5 @@ class IconsApp {
 
   static const String allow = 'assets/svg/allow_icon.svg';
   static const String questionMark = 'assets/svg/question_mark_icon.svg';
+  static const String appbarLady = 'assets/svg/appbar_lady.svg';
 }

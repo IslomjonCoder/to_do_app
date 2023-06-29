@@ -16,8 +16,9 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<NavBar> {
-  int pageIndex = 0;
+  int pageIndex = 1;
   List<Widget> _screens = [];
+  // bool isMenuButtonPressed = false;
   @override
   void initState() {
     _screens = [
@@ -49,6 +50,7 @@ class _NavBarState extends State<NavBar> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SvgPicture.asset(
+                    height: 24,
                     IconsApp.addBig,
                   ),
                   const SizedBox(
@@ -56,6 +58,7 @@ class _NavBarState extends State<NavBar> {
                   ),
                   const Text(
                     "Create New Task",
+                    style: TextStyle(fontSize: 15),
                   ),
                 ],
               ),
@@ -78,6 +81,11 @@ class _NavBarState extends State<NavBar> {
           child: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
             backgroundColor: ColorsApp.secondaryBG,
+            onTap: (index) {
+              setState(() {
+                pageIndex = index;
+              });
+            },
             items: [
               _getBottomNavBarItem(
                 icon: IconsApp.bottomMenu,
@@ -105,11 +113,7 @@ class _NavBarState extends State<NavBar> {
               ),
             ],
             currentIndex: pageIndex,
-            onTap: (index) {
-              setState(() {
-                pageIndex = index;
-              });
-            },
+
             iconSize: 28,
             selectedItemColor: Colors.white,
             unselectedItemColor: ColorsApp.mainIconColor,
@@ -133,10 +137,25 @@ _getBottomNavBarItem({
         colorFilter: index == 1
             ? const ColorFilter.mode(ColorsApp.mainIconColor, BlendMode.srcIn)
             : null),
-    activeIcon: SvgPicture.asset(activeIcon,
-        colorFilter: index == 1
-            ? const ColorFilter.mode(Colors.white, BlendMode.srcIn)
-            : null),
+    activeIcon:
+        // Container(
+
+        // decoration: BoxDecoration(
+        //   border: Border.all(
+        //     color: ColorsApp.borderColor,
+        //   ),
+        //   borderRadius: BorderRadius.circular(
+        //     10,
+        //   ),
+        // ),
+        // child:
+
+        SvgPicture.asset(activeIcon,
+            colorFilter: index == 1
+                ? const ColorFilter.mode(Colors.white, BlendMode.srcIn)
+                : null),
+    // ),
+
     label: label,
   );
 }
