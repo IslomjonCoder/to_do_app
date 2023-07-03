@@ -3,7 +3,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:to_do_app/utils/colors.dart';
 
 import '../../utils/icons.dart';
-import '../menu_drawer/drawer.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

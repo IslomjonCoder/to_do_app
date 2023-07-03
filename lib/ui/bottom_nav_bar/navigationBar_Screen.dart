@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:to_do_app/ui/calendar_screen/calendar_screen.dart';
+import 'package:to_do_app/ui/create_task/create_task.dart';
 import 'package:to_do_app/ui/home/home.dart';
 import 'package:to_do_app/ui/profile_screen/profile_screen.dart';
 import 'package:to_do_app/utils/colors.dart';
@@ -16,6 +17,7 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<NavBar> {
+  bool taskPagePressed = false;
   int pageIndex = 1;
   List<Widget> _screens = [];
   // bool isMenuButtonPressed = false;
@@ -44,7 +46,14 @@ class _NavBarState extends State<NavBar> {
             shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(0)),
             ),
-            onPressed: () {},
+            onPressed: () {
+              setState(
+                () {
+                  taskPagePressed = !taskPagePressed;
+                  print(taskPagePressed);
+                },
+              );
+            },
             child: Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -66,7 +75,15 @@ class _NavBarState extends State<NavBar> {
           ),
         ),
       ),
-      body: _screens[pageIndex],
+      body: Stack(
+        children: [
+          _screens[pageIndex],
+          Visibility(
+            visible: taskPagePressed,
+            child: AddTaskPage(),
+          ),
+        ],
+      ),
       bottomNavigationBar: SizedBox(
         height: 70,
         child: ClipRRect(
