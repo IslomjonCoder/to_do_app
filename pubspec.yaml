@@ -20,10 +20,11 @@ dependencies:
   device_preview: ^1.1.0
   flutter_screenutil: ^5.8.4
   zoom_tap_animation: ^1.1.0
-
+  table_calendar: ^3.0.9
   sqflite: ^2.2.8+4
 
   shared_preferences: ^2.1.2
+  intl: ^0.18.0
 
 
 dev_dependencies:

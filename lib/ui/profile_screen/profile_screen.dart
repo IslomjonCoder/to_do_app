@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../utils/colors.dart';
-import '../../utils/icons.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -88,7 +86,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ],
         ),
       ),
-      body: Center(
+      body: const Center(
         child: Text(
           "Profile Screen",
           style: TextStyle(

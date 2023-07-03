@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:intl/intl.dart';
+import 'package:table_calendar/table_calendar.dart';
 
 import '../../utils/colors.dart';
 import '../../utils/icons.dart';
@@ -131,11 +133,83 @@ class _CalendarScreenState extends State<CalendarScreen> {
           ],
         ),
       ),
-      body: const Center(
-        child: Text(
-          "Calendar Screen",
-          style: TextStyle(
-            fontSize: 30,
+      body: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: TableCalendar(
+          firstDay: DateTime.now().subtract(
+            const Duration(
+              days: 365,
+            ),
+          ),
+          lastDay: DateTime.now().add(
+            const Duration(
+              days: 365,
+            ),
+          ),
+          focusedDay: DateTime.now(),
+          headerVisible: false,
+          daysOfWeekHeight: 18,
+          daysOfWeekStyle: DaysOfWeekStyle(
+            dowTextFormatter: (date, locale) {
+              final dayOfWeek = DateFormat.E(locale).format(date);
+              return dayOfWeek.substring(0, 1).toUpperCase();
+            },
+            decoration: const BoxDecoration(),
+            weekdayStyle: const TextStyle(
+              fontSize: 19,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+            weekendStyle: const TextStyle(
+              fontSize: 19,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          ),
+          weekendDays: [],
+          onDaySelected: (selectedDay, focusedDay) {
+            setState(() {
+              print("focusedDay: $focusedDay");
+              print("selectedDay: $selectedDay");
+            });
+          },
+          calendarStyle: const CalendarStyle(
+            withinRangeTextStyle: TextStyle(
+              fontSize: 19,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+            defaultTextStyle: TextStyle(
+              fontSize: 19,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+            outsideTextStyle: TextStyle(
+              fontSize: 19,
+              color: ColorsApp.calendarOutsideColor,
+            ),
+            todayDecoration: BoxDecoration(
+              color: ColorsApp
+                  .mainButtoncolor, // Change the color of the selected date here
+              shape: BoxShape
+                  .rectangle, // Set the shape to BoxShape.rectangle for a square shape
+              borderRadius: BorderRadius.all(
+                Radius.circular(
+                  8.0,
+                ),
+              ),
+            ),
+            selectedDecoration: BoxDecoration(
+              color: ColorsApp
+                  .mainButtoncolor, // Change the color of the selected date here
+              shape: BoxShape
+                  .rectangle, // Set the shape to BoxShape.rectangle for a square shape
+              borderRadius: BorderRadius.all(
+                Radius.circular(
+                  8.0,
+                ),
+              ),
+            ),
           ),
         ),
       ),

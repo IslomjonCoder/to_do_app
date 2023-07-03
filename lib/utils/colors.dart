@@ -8,4 +8,5 @@ class ColorsApp {
   static const Color mainIconColor= Color(0xFF777E99);
   static const Color secondaryForTextAndIcon = Color(0xFFA1A1C1);
   static const Color faqColorandSomeTexts = Color(0xFF8489A0);
+  static const Color calendarOutsideColor = Color(0xFF535252);
 }

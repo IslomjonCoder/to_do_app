@@ -46,6 +46,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
               decoration: const InputDecoration(
                 hintText: "Title",
                 hintStyle: TextStyle(
+                  fontSize: 20,
                   color: Colors.white,
                 ),
               ),
