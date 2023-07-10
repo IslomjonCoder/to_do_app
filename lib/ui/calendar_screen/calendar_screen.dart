@@ -14,6 +14,19 @@ class CalendarScreen extends StatefulWidget {
 }
 
 class _CalendarScreenState extends State<CalendarScreen> {
+   
+  // DateTime _selectedDay = DateTime.now();
+  // void _navigateToPreviousMonth() {
+  //   setState(() {
+  //     _focusedDay = DateTime(_focusedDay.year, _focusedDay.month - 1, _focusedDay.day);
+  //   });
+  // }
+
+  // void _navigateToNextMonth() {
+  //   setState(() {
+  //     _focusedDay = DateTime(_focusedDay.year, _focusedDay.month + 1, _focusedDay.day);
+  //   });
+  // }
   bool isArrowPressed = false;
   @override
   Widget build(BuildContext context) {
@@ -169,6 +182,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
           weekendDays: [],
           onDaySelected: (selectedDay, focusedDay) {
             setState(() {
+             focusedDay= selectedDay ;
               print("focusedDay: $focusedDay");
               print("selectedDay: $selectedDay");
             });
